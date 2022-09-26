@@ -1,10 +1,11 @@
 .pets {
   position: relative;
   padding: 75px 0 0 0;
-  background: url("../../../assets/images/palm.png") -587px 722px no-repeat;
+  background: url('../../../assets/images/palm.png') -587px 722px no-repeat;
   &__2 {
     padding: 0 0 100px 0;
-    background: url("../../../assets/images/strelitzia.png") calc(100vw - 367px) 832px no-repeat;
+    background: url('../../../assets/images/strelitzia.png') calc(100vw - 367px)
+      832px no-repeat;
   }
   &__wrapper {
     display: flex;
@@ -22,18 +23,18 @@
   }
   &__control {
     position: relative;
-
+    transition: 0.5s;
     width: 62px;
     height: 62px;
     background: $orang;
     cursor: pointer;
     border-radius: 50%;
     &:hover {
-      background: #E47209;
+      background: #e47209;
       cursor: pointer;
     }
     &:active {
-      background: #4B9200;
+      background: #4b9200;
       cursor: pointer;
     }
     img {
@@ -47,15 +48,31 @@
 }
 
 .pet {
+  position: relative;
+  cursor: pointer;
   width: 366px;
   height: 426px;
-  border: 1px solid #FE9013;
+  border: 1px solid #fe9013;
   border-radius: 5px;
   margin-bottom: 20px;
+  transition: 0.5s;
+  &__animation {
+    top: 0;
+    position: absolute;
+    padding: 20px;
+    cursor: pointer;
+    width: 364px;
+    height: 366px;
+    border-radius: 5px;
+    color: #fff;
+    background: rgb(0, 0, 0);
+  }
   &__img {
     position: relative;
     height: 366px;
+    overflow: hidden;
     img {
+      transition: 1s;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -63,7 +80,18 @@
       top: 0;
       left: 0;
       border-radius: 4px;
-
+      div {
+        height: 466px;
+        opacity: 0;
+        transition: 2s;
+      }
+      &:hover {
+        top: -7%;
+        left: -7%;
+        width: 114%;
+        height: 114%;
+        opacity: 0.2;
+      }
     }
   }
   &__descr {
