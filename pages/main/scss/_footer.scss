@@ -1,0 +1,137 @@
+.footer {
+  height: 443px;
+  background: #111115;
+  color: #FFFFFF;
+
+  &__items {
+    display: flex;
+    height: 443px;
+    align-items: flex-end;
+    color: #FFFFFF;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__left {
+    width: 39.5%;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  &__social {
+    margin-top: 40px;
+    margin-left: 0;
+    padding: 0;
+  }
+  &__social-list {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    list-style: none;
+    margin-left: 0;
+  }
+  &__social-link {
+    display: inline-block;
+    display: inline-block;
+    margin: 4px 0 5px 0;
+    color: #FFF;
+    &:hover {
+    color: #E47209;
+    }
+    &:active {
+      color: #4B9200;
+    }
+    .social-circle {
+      display: inline-block;
+      margin-right: 12px;
+      width: 26px;
+      height: 26px;
+      background: rgba(196, 196, 196, 0.5);
+      border-radius: 50%;
+      
+      &:hover {
+        background: #E47209;
+        }
+      &:active {
+        background: #4B9200;
+      }
+    }
+    img {
+      margin-bottom: -6px;
+    }
+  }
+
+  &__center {
+    width: 55%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 34px;
+    .nav {
+      &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+      }
+      &__link {
+        padding: 0 29.5px;
+        text-decoration-line: none;
+        color: #ffffff;
+        transition: .5s;
+        &:hover {
+          color: #F9804B;
+        }
+        &:active {
+          color: #F9804B;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 45px;
+    width: 44%;
+  }
+  &__label {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+  }
+  &__input {
+    margin-top: 12px;
+    width: 228px;
+    height: 42px;
+    background: #111115;
+    border: 1px solid #FE9013;
+    padding: 0 10px;
+    margin-right: 7px;
+
+    placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #BDBDBD;
+    }
+  }
+   &__links {
+    align-self: end;
+    margin-top: 214px;
+    text-align: left;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 190%;
+  }
+  &__link {
+    font-weight: 100;
+    color: #FFF;
+  }
+}

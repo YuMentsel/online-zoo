@@ -1,0 +1,38 @@
+.backstage {
+  width: 100vw;
+  padding: 140px 0 100px 0;
+  background: url("../../../assets/images/flower.png") calc(100vw - 205px) 12px no-repeat;
+
+  &__wrapper {
+    display: flex;
+  }
+  &__descr {
+    margin-left: 86px;
+    font-weight: 400;
+    color: #333B41;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+  }
+  &__subtitle {
+    margin-top: 55px;
+    margin-bottom: 33px;
+    font-size: 24px;
+    line-height: 120%;
+
+  }
+  &__text {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .subtitle {
+    line-height: 138%;
+
+  }
+}
+
+

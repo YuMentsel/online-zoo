@@ -1,0 +1,96 @@
+.testimonials {
+  height: 777px;
+  background: url("../../../assets/images/leav.png") calc(100vw - 245px) 502px no-repeat;
+  &__small-title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #333B41;
+    text-align: center;
+    margin: 143px 0 0 0;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .testimonial {
+    margin-top: 45px;
+    background: $pink;
+    border-radius: 20px;
+    width: 267px;
+    height: 392px;
+    padding: 2px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 13px 12px 0 15px;
+      height: 388px;
+      background: #F1F3F2;
+      border-radius: 18px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 120%;
+      color: #000000;
+    }
+    &__title {
+      display: flex;
+    }
+    &__img {
+      width: 37px;
+      height: 37px;
+    }
+    &__user {
+      margin-top: 1px;
+      margin-left: 10px;
+      width: 190px;
+    }
+    &__name {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    &__local {
+      color: #BDBDBD;
+      span {
+        margin: 0 2px;
+        font-weight: 400;
+      }
+    }
+    &__text {
+      margin-top: 11px;
+      font-weight: 300;
+      font-size: 15px;
+      color: #767474;
+
+    }
+  }
+
+  .range {
+    margin: 19px auto 0 auto;
+    text-align: center;
+    width: 600px;
+    height: 8px;
+    padding: 1px;
+    background: $pink;
+    border-radius: 4px;
+    &__input {
+      height: 6px;
+      background: #F5F7F6;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    &__value {
+      width: 115px;
+      height: 6px;
+      background: #FE9013;
+      border-radius: 3px;
+      &:hover {
+        background: #E47209;
+        cursor: pointer;
+      }
+      &:active {
+        background: #4B9200;
+        cursor: pointer;
+      }
+    }
+  }
+}

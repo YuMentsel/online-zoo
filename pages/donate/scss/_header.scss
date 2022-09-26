@@ -1,0 +1,71 @@
+.header {
+  height: 80px;
+  padding: 14px;
+  background: #000000;
+  backdrop-filter: blur(2px);
+  font-weight: 500;
+  font-size: 16px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#FFFFFF;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .nav {
+      &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        margin-left: 21px;
+        list-style: none;
+        font-size: 16px;
+      }
+      &__link {
+        padding: 0 58px 0 0;
+        text-decoration-line: none;
+        color: #ffffff;
+        transition: .5s;
+        font-weight: 400;
+
+
+        &:hover, &:active {
+          background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+  .designed {
+    text-decoration-line: none;
+    transition: .5s;
+    color: #ffffff;
+    background: #FFF;
+    -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    &:hover, &:active, &:visited {
+      background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.active {
+  background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  cursor: default;
+}

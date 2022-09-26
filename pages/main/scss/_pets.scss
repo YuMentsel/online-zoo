@@ -1,0 +1,90 @@
+.pets {
+  position: relative;
+  padding: 75px 0 0 0;
+  background: url("../../../assets/images/palm.png") -587px 722px no-repeat;
+  &__2 {
+    padding: 0 0 100px 0;
+    background: url("../../../assets/images/strelitzia.png") calc(100vw - 367px) 832px no-repeat;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__controls {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1322px;
+  }
+  &__control {
+    position: relative;
+
+    width: 62px;
+    height: 62px;
+    background: $orang;
+    cursor: pointer;
+    border-radius: 50%;
+    &:hover {
+      background: #E47209;
+      cursor: pointer;
+    }
+    &:active {
+      background: #4B9200;
+      cursor: pointer;
+    }
+    img {
+      display: block;
+      position: absolute;
+      margin: 0 21px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.pet {
+  width: 366px;
+  height: 426px;
+  border: 1px solid #FE9013;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  &__img {
+    position: relative;
+    height: 366px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+
+    }
+  }
+  &__descr {
+    color: #000000;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  &__habitat {
+    font-weight: 300;
+    font-size: 15px;
+  }
+  &__diet {
+    margin-top: 3px;
+  }
+  .descr__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px 15px 15px;
+  }
+}

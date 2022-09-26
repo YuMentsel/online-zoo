@@ -1,0 +1,45 @@
+.watch {
+  .circle {
+    position: relative;
+    width: 465px;
+    height: 465px;
+    left: calc(50% - 465px/2 + 239.5px);
+    top: -76px;
+    background: $orang;
+    border-radius: 50%;
+
+    .title {
+      position: relative;
+      top: 75px;
+      left: 90px;
+      font-weight: 700;
+      font-size: 106.5px;
+      text-align: center;
+      line-height: 75%;
+      text-transform: uppercase;
+      color: #FFF;
+      span {
+        position: relative;
+        color: #FFEE2E;
+        left: -8px;
+      }
+    }
+    // .btn {
+    //   position: relative;
+    //   width: 298px;
+    //   height: 54px;
+    //   border: none;
+    //   top: 65px;
+    //   left: 175px;
+    //   padding: 17px 17px 17px 22px;
+    //   text-transform: uppercase;
+    //   text-align: center;
+    //   background: $orang;
+    //   border-radius: 25px;
+    //   color: #fff;
+    //   &:hover {
+    //     color: #FFEE2E;
+    //   }
+    // }
+  }
+}
