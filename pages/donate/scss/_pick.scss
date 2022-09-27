@@ -187,16 +187,32 @@
     padding: 0 8px;
     width: 268px;
     height: 54px;
-    background:rgba(255, 255, 255, 0);
+    background: url(../../../assets/icons/dol.svg) no-repeat scroll 246px 16px;
     border: 1px solid #929699;
     border-radius: 2px;
     outline: none;
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+    
     &::placeholder {
       font-weight: 400;
       font-size: 16px;
       line-height: 140%;
       color: #929699;
     }
+  }
+  &__number::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
+    font-size: 15px;
+    color: #000;
+
   }
   &__wrapper {
     display: flex;
@@ -244,7 +260,12 @@
   color: #333b41;
   margin-top: -32px;
 }
-.input__radio:checked + label::before {
+.input__radio:checked + label:before {
   border: 1px solid #4B9200;
   background: #4B9200;
 }
+// .input__radio:not(:checked) + label:before {
+//   border: 1px solid #fe9013;
+//   background: #4b920000;
+
+// }
