@@ -260,12 +260,7 @@
   color: #333b41;
   margin-top: -32px;
 }
-.input__radio:checked + label:before {
+.checked + label::before {
   border: 1px solid #4B9200;
   background: #4B9200;
 }
-// .input__radio:not(:checked) + label:before {
-//   border: 1px solid #fe9013;
-//   background: #4b920000;
-
-// }

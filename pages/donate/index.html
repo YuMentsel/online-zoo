@@ -128,12 +128,12 @@
             <div class="price__item"><span>$25</span></div>
           </div>
           <input required class="input__number" name="email" placeholder="Another amount" type="number">
-          <div class="input__wrapper">
-            <input class="input__radio" name="monthly" id="monthly" value="1" type="radio">
+          <form class="input__wrapper">
+            <input class="input__radio monthly" name="monthly" id="monthly" value="1" type="radio">
             <label class="input__label"for="monthly">Monthly</label>
-            <input class="input__radio" name="once" id="once" value="2" type="radio" checked>
+            <input class="input__radio once checked" name="once" id="once" value="2" type="radio" >
             <label class="input__label"for="once">Once</label>
-          </div>
+          </form>
 
           <button class="btn btn_pick">Feed a friend now</button>
           <div class="text">Share with your friends on social networks </div>
@@ -181,5 +181,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
