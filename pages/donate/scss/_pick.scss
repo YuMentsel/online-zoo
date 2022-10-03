@@ -1,7 +1,7 @@
 .pick {
-  padding: 40px 0 20px 0;
+  padding: 40px 0 180px 0;
   background: $orange_gradient;
-  height: 1483px;
+  min-height: 1333px;
   &__main-text {
     font-weight: 400;
     font-size: 36px;
@@ -9,7 +9,7 @@
     color: #ffffff;
   }
   &__text {
-    margin-top: 10px;
+    margin-top: 9px;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -17,6 +17,7 @@
   }
   &__small-title {
     margin-top: 45px;
+    font-weight: 400;
     font-size: 36px;
     line-height: 130%;
     color: #fe9013;
@@ -81,7 +82,7 @@
   }
 }
 .amount {
-  margin-left: 37px;
+  margin: 0 37px;
   &__title {
     margin-top: 43px;
     margin-left: 3px;
@@ -95,13 +96,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 976px;
+    width: 100%;
     height: 27px;
+    padding: 0 30px;
     background: #404950;
     border-radius: 2px;
   }
   &__line {
-    width: 915px;
+    width: 100%;
     height: 2px;
     background: #72828e;
   }
@@ -110,7 +112,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 963px;
+    width: calc(100% - 198px);
   }
   &__area {
     display: flex;
@@ -162,16 +164,17 @@
 }
 .price {
   margin-top: 13px;
-  margin-left: 35px;
-  width: 1040px;
+  padding: 0 16px 0 6px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   &__item {
-    width: calc(1040px / 8);
+    width: calc(100% / 8);
     font-weight: 500;
     font-size: 26px;
     line-height: 140%;
+    text-align: center;
     text-transform: uppercase;
     color: #333b41;
   }
@@ -192,27 +195,36 @@
     border-radius: 2px;
     outline: none;
     &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
+      -webkit-appearance: none;
     }
     &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
+      -webkit-appearance: none;
     }
-    
+
     &::placeholder {
       font-weight: 400;
       font-size: 16px;
       line-height: 140%;
       color: #929699;
     }
+    &:focus {
+      outline: none;
+      color: #4b9200;
+      border-color: #4b9200;
+      transition: 0.5s;
+    }
+    &:invalid {
+      border-color: #d31414;
+      color: #d31414;
+    }
   }
-  &__number::after{
+  &__number::after {
     content: '';
     width: 10px;
     height: 10px;
     background-color: rgb(255, 0, 0);
     font-size: 15px;
     color: #000;
-
   }
   &__wrapper {
     display: flex;
@@ -254,13 +266,268 @@
 }
 .text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15.9px;
   line-height: 140%;
   text-align: center;
   color: #333b41;
   margin-top: -32px;
 }
 .checked + label::before {
-  border: 1px solid #4B9200;
-  background: #4B9200;
+  border: 1px solid #4b9200;
+  background: #4b9200;
+}
+
+@media (max-width: 1000px) {
+  .pick {
+    padding: 38px 0 30px 0;
+    &__main-text {
+      margin-top: 3px;
+      padding-right: 100px;
+    }
+    &__text {
+      margin-top: 30px;
+    }
+    &__wrapper {
+      margin-top: 40px;
+      padding: 20px 45px;
+      height: 918px;
+    }
+    &__title {
+      margin: 0;
+      margin-left: -14px;
+    }
+
+    &__subtitle {
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+  }
+  .amount {
+    margin: 0 20px;
+    &__title {
+      margin-top: 43px;
+      margin-left: 0px;
+    }
+    &__back {
+      margin-top: 19px;
+      padding: 0 15px;
+    }
+    &__areas {
+      width: calc(100% - 106px);
+    }
+    &__area.small {
+      display: none;
+    }
+  }
+  .price {
+    width: 103%;
+    padding: 0;
+    &__item.small {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .pick {
+    &__wrapper {
+      padding: 20px 0px;
+    }
+    &__subtitle {
+      padding: 0 20px;
+    }
+  }
+
+  .amount {
+    &__areas {
+      width: calc(100% - 20px);
+    }
+    &__area.tablet {
+      display: none;
+    }
+    &__area,
+    &__area2,
+    &__area3 {
+      &.active-tablet {
+        border: 2px solid #fe9013;
+      }
+    }
+  }
+  .price {
+    margin: 13px;
+    width: 95.8%;
+    &__item {
+      width: 60px;
+      &.tablet {
+        display: none;
+      }
+      &.active-tablet {
+        color: #fe9013;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .diet {
+    padding: 0px 26px;
+    margin-top: 50px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .pick {
+    margin-top: 0px;
+    padding: 25px 0 30px 0;
+    &__main-text {
+      font-size: 24px;
+      padding-right: 0px;
+    }
+    &__text {
+      margin-top: 20px;
+      line-height: 135%;
+    }
+    &__small-title {
+      margin-top: 32px;
+    }
+    &__wrapper {
+      margin-top: 30px;
+    }
+    &__title {
+      margin-top: 10px;
+      margin-left: 3px;
+    }
+
+    &__subtitle {
+      margin-top: 20px;
+      margin-bottom: 0px;
+
+      text-align: center;
+    }
+  }
+  .amount {
+    margin: 0;
+    &__title {
+      margin-top: 36px;
+      margin-left: 10px;
+    }
+    &__back {
+      margin-top: 8px;
+      padding: 0 35px;
+    }
+    &__areas {
+      width: calc(100% - 26px);
+    }
+  }
+  .input {
+    &__number {
+      width: 180px;
+      height: 42px;
+      padding: 0 5px;
+      background-position: 158px 10px;
+    }
+    &__radio {
+      margin-top: 70px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .diet {
+    &__img {
+      width: 95%;
+    }
+    &__x {
+      margin-right: 20px;
+    }
+  }
+  .pick {
+    min-height: 900px;
+    &__wrapper {
+      height: 870px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .pick {
+    &__wrapper {
+      height: 653px;
+    }
+    &__small-title {
+      font-size: 24px;
+    }
+    &__title {
+      margin-top: 0;
+      font-size: 24px;
+    }
+    &__subtitle {
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 0;
+    }
+  }
+  .diet {
+    padding: 0;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+
+    &__item:last-child {
+      width: 57%;
+    }
+    &__x {
+      margin: 16px 18px 0 0;
+      width: 8px;
+    }
+    &__img {
+      margin-left: 0px;
+    }
+
+    &__title {
+      margin-top: 28px;
+      font-size: 40.6015px;
+    }
+    &__subtitle {
+      font-size: 12px;
+      margin-top: 7px;
+    }
+  }
+  .amount {
+    &__areas {
+      width: 105%;
+    }
+    &__back {
+      padding: 0 15px;
+      height: 20px;
+    }
+    &__title {
+      margin: 0;
+    }
+  }
+  .price {
+    margin: 15px 0;
+      width: 100%;
+    &__item {
+      width: 40px;
+      font-size: 16px;
+    }
+  }
+  .input {
+    &__number {
+      margin-top: 25px;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .diet {
+    &__subtitle {
+      font-size: 9px;
+    }
+  }
 }

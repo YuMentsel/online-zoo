@@ -1,11 +1,12 @@
 .testimonials {
   height: 777px;
-  background: url("../../../assets/images/leav.png") calc(100vw - 245px) 502px no-repeat;
+  background: url('../../../assets/images/leav.png') calc(100vw - 245px) 502px
+    no-repeat;
   &__small-title {
     font-weight: 400;
     font-size: 36px;
     line-height: 130%;
-    color: #333B41;
+    color: #333b41;
     text-align: center;
     margin: 143px 0 0 0;
   }
@@ -25,7 +26,7 @@
       flex-direction: column;
       padding: 13px 12px 0 15px;
       height: 388px;
-      background: #F1F3F2;
+      background: #f1f3f2;
       border-radius: 18px;
       font-weight: 300;
       font-size: 15px;
@@ -49,7 +50,7 @@
       font-size: 16px;
     }
     &__local {
-      color: #BDBDBD;
+      color: #bdbdbd;
       span {
         margin: 0 2px;
         font-weight: 400;
@@ -60,37 +61,157 @@
       font-weight: 300;
       font-size: 15px;
       color: #767474;
-
     }
   }
 
-  .range {
+  &__input {
+    display: block;
     margin: 19px auto 0 auto;
-    text-align: center;
-    width: 600px;
-    height: 8px;
-    padding: 1px;
-    background: $pink;
-    border-radius: 4px;
-    &__input {
-      height: 6px;
-      background: #F5F7F6;
-      border-radius: 3px;
-      cursor: pointer;
+    overflow: hidden;
+    width: 51.65%;
+    appearance: none;
+    border-radius: 5px;
+    border: double 0.5px transparent;
+    background-image: linear-gradient(white, white), $pink;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+    &::-webkit-slider-runnable-track {
+      height: 8px;
+      border-radius: 5px;
+      appearance: none;
+      margin-top: -1px;
+      box-sizing: content-box;
+      background: #f5f7f6;
     }
-    &__value {
+
+    &::-webkit-slider-thumb {
       width: 115px;
-      height: 6px;
-      background: #FE9013;
-      border-radius: 3px;
-      &:hover {
-        background: #E47209;
-        cursor: pointer;
+      height: 7px;
+      appearance: none;
+      margin-top: 1px;
+      border-radius: 20px;
+      cursor: pointer;
+      background: $orang;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .testimonials {
+    &__wrapper {
+      justify-content: space-evenly;
+    }
+    .mila {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .testimonials {
+    height: 740px;
+    background-position: 805px 500px;
+    background-size: 32.5%;
+    &__small-title {
+      margin: 101px 0 0 0;
+    }
+    &__wrapper {
+      justify-content: space-between;
+    }
+    .testimonial {
+      margin-top: 28px;
+      width: 292px;
+    }
+    &__input {
+      position: relative;
+      width: 41.5%;
+      left: -6px;
+      &::-webkit-slider-thumb {
+        width: 75px;
       }
-      &:active {
-        background: #4B9200;
-        cursor: pointer;
+    }
+  }
+}
+@media (max-width: 960px) {
+  .testimonials {
+    height: 706px;
+    .testimonial {
+      width: 31.3%;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .testimonials {
+    height: 656px;
+    &__small-title {
+      margin-top: 82px;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 28px;
+      height: 357px;
+    }
+    .testimonial {
+      margin-top: 0;
+      height: 109px;
+      width: 100%;
+      &__wrapper {
+        height: 100%;
       }
+      &__title {
+        margin-left: -5px;
+      }
+      &__text {
+        overflow: hidden;
+        text-overflow: clip;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    &__input {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials {
+    height: 606px;
+    &__small-title {
+      margin-top: 62px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .testimonials {
+    height: 580px;
+    &__small-title {
+      margin-top: 38px;
+      font-size: 28px;
+    }
+    &__wrapper {
+      margin-top: 20px;
+    }
+    .testimonial {
+      &__wrapper {
+        padding: 9px 12px 0 15px;
+      }
+      &__user {
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .testimonials {
+    height: 552px;
+    &__small-title {
+      margin-top: 28px;
+      font-size: 24px;
     }
   }
 }

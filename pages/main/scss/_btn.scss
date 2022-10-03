@@ -10,25 +10,32 @@
   border-radius: 25px;
   color: #fff;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   &:hover {
-    background: #E47209;
+    background: #e47209;
   }
   &:active {
-    background: #4B9200;
+    background: #4b9200;
   }
   &:disabled {
     background: #767474;
   }
-
+  &_watch-info {
+    display: none;
+  }
   &_watch {
+    margin: 0 auto;
     position: relative;
-    top: 46px;
-    left: 175px;
+    top: 135px;
+    left: 90px;
   }
   &_pets {
     margin: 60px auto 0 auto;
     display: block;
+    a {
+      display: inline-block;
+      color: #fff;
+    }
   }
   &_pick {
     margin: 60px auto 60px auto;
@@ -40,38 +47,110 @@
     padding: 0;
   }
   &_footer {
-    margin-top: 33px;
     border-radius: 5px;
     padding: 0;
+    a {
+      display: inline-block;
+      color: #fff;
+      margin: 15px 50px;
+    }
   }
   &_submit {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 127px;
+    width: 130px;
     height: 42px;
-    background: #F1F3F2;
-    border: 1px solid #333B41;
+    background: #f1f3f2;
+    border: 1px solid #333b41;
     border-radius: 5px;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    color: #333B41;
+    color: #333b41;
     padding: 10px;
     text-transform: capitalize;
-    &:active {
-      color: #4B9200;
-      background: #F1F3F2;
-      border: 1.5px solid #4B9200;
+  }
+}
+
+@media (max-width: 1000px) {
+  .btn {
+    &_watch {
+      top: 95px;
+      left: 73px;
     }
-    &:hover {
-      color: #4B9200;
-      background: #F1F3F2;
-      border: 1.5px solid #4B9200;
+    &_pets {
+      margin-top: 80px;
+    }
+    &_pick {
+      margin-top: 70px;
+      margin-bottom: 20px;
+    }
+    &_testimonials {
+      margin-top: 52px;
     }
   }
-  a {
-    display: inline-block;
-    color:#fff;
-    margin: 15px 50px;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    &_watch {
+      top: 33px;
+      left: -310px;
+    }
+    &_pets {
+      margin-top: 60px;
+    }
+    &_pick {
+      margin-top: 40px;
+    }
+    &_testimonials {
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 240px;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .btn {
+    &_watch {
+      display: none;
+    }
+    &_watch-info {
+      display: block;
+      position: relative;
+      top: 400px;
+      margin:0 auto;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .btn_watch-info {
+    top: 340px;
+  }
+}
+@media (max-width: 370px) {
+  .btn {
+    &_pick {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .btn {
+
+    &_watch-info {
+      top: 240px;
+    }
+    &_pets {
+      margin-top: 0px;
+    }
+    &_testimonials {
+      margin-top: 30px;
+    }
+
   }
 }
