@@ -1,7 +1,8 @@
 .testimonials {
   height: 777px;
-  background: url('../../../assets/images/leav.png') calc(100vw - 245px) 502px
-    no-repeat;
+  // // background: url('../../../assets/images/leav.png') calc(100vw - 245px) 502px
+  //   no-repeat;
+  background: url('../../../assets/images/leav.png') no-repeat 113.6% 136%;
   &__small-title {
     font-weight: 400;
     font-size: 36px;
@@ -132,6 +133,12 @@
     }
   }
 }
+@media (max-width: 999px) {
+  .testimonials {
+    background: url('../../../assets/images/leav.png') no-repeat 112% 117%;
+    background-size: auto 213px;
+  }
+}
 @media (max-width: 960px) {
   .testimonials {
     height: 706px;
@@ -176,13 +183,20 @@
     }
   }
 }
-
 @media (max-width: 640px) {
   .testimonials {
+    background: url('../../../assets/images/leav.png') no-repeat 122.5% 120%;
+    background-size: auto 213px;
     height: 606px;
     &__small-title {
       margin-top: 62px;
     }
+  }
+}
+@media (max-width: 639px) {
+  .testimonials {
+    background: url('../../../assets/images/leav_320.png') no-repeat 100% 106%;
+    background-size: auto;
   }
 }
 @media (max-width: 480px) {
