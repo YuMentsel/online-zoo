@@ -123,6 +123,12 @@ a {
     background-position: left 34px;
   }
 }
+@media (max-width: 340px) {
+  .footer .container {
+    max-width: 320px;
+    padding: 0 10px;
+  }
+}
 @media (max-width: 440px) {
   .container {
     max-width: 440px;
