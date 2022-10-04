@@ -123,6 +123,7 @@ a {
   }
 }
 @media (max-width: 340px) {
+  .pick .container,
   .footer .container {
     max-width: 320px;
     padding: 0 10px;
