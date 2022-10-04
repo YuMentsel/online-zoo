@@ -1,8 +1,7 @@
 .backstage {
   width: 100vw;
   padding: 140px 0 100px 0;
-  background: url('../../../assets/images/flower.png') calc(50vw + 600px) 12px
-    no-repeat;
+  background: url('../../../assets/images/flower.png') calc(55vw + 600px) 12px no-repeat;
 
   &__wrapper {
     display: flex;
@@ -38,6 +37,12 @@
   }
   .subtitle {
     line-height: 138%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .backstage {
+    background: url('../../../assets/images/flower.png') calc(50vw + 600px) 12px no-repeat;
   }
 }
 
