@@ -444,7 +444,7 @@
   .pick {
     min-height: 900px;
     &__wrapper {
-      height: 870px;
+      height: 900px;
     }
 
     &__title {
@@ -453,11 +453,25 @@
   }
 }
 
+@media (max-width: 550px) {
+  .pick__wrapper {
+    height: 880px;
+  }
+}
+@media (max-width: 440px) {
+  .pick__wrapper {
+    height: 680px;
+  }
+}
+
+@media (max-width: 370px) {
+  .pick__wrapper {
+    height: 650px;
+  }
+}
+
 @media (max-width: 440px) {
   .pick {
-    &__wrapper {
-      height: 653px;
-    }
     &__small-title {
       font-size: 24px;
     }
