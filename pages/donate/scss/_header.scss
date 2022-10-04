@@ -209,6 +209,14 @@
   }
 }
 
+@media (max-width: 440px) {
+  .header {
+    .logo__bamboo {
+      left: 13px;
+    }
+  }
+}
+
 @media (max-width: 320px) {
   .header {
     .logo__bamboo {
