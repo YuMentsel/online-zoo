@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div class="overlay menu-overlay"></div>
+  <div class="overlay popup-overlay"></div>
   <div class="intro">
     <header class="header">
       <div class="container">
@@ -24,18 +26,25 @@
             </a>
 
             <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item active"><a href="../main/" class="nav__link">About</a></li>
-              <li class="nav__item"><a href="../map/" class="nav__link">Map</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Zoos</a></li>
-              <li class="nav__item"><a href="../donate/" class="nav__link">Donate</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
-            </ul>
+              <ul class="nav__list">
+                <li>
+                  <a href="../main/" class="logo logo__burger">
+                    <img src="../../assets/icons/logo_burger.svg" alt="logo" class="logo__img">
+                    <span class="logo__title">PetStory <br> online</span>
+                  </a>
+                </li>
+                <li class="nav__item active"><a href="../main/" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="../map/" class="nav__link">Map</a></li>
+                <li class="nav__item"><a href="../zoos/" class="nav__link">Zoos</a></li>
+                <li class="nav__item"><a href="../donate/" class="nav__link">Donate</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+                <li class="nav__item small"><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="nav__link">Designed&nbsp;by&nbsp;©</a></li>
+              </ul>
             </nav>
           </div>
 
           <a class="designed" target="_blank" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by ©</a>
-          <div class="hamburger">
+          <div class="burger">
             <span></span>
             <span></span>
             <span></span>
@@ -67,96 +76,17 @@
       </div>
     </section>
     <section class="pets">
-      <div class="pets__2">
-        <div class="container">
-          <div class="pets__wrapper">
-            <div class="pet">
-              <div class="pet__img pet__pandas"></div>
-              <div class="pet__info">
-                  <div class="pet__descr">
-                      <div class="pet__title">Giant Pandas</div>
-                      <div class="pet__subtitle">Native to Southwest China</div>
-                      <div class="pet__text">The panda, with its distinctive black and white coat, is adored by the world and considered a national treasure in China. <br>
-                        Pandas live mainly in temperate forests high in the mountains of southwest China, where they subsist almost entirely on bamboo. They must eat around 26 to 84 pounds of it every day, depending on what part of the bamboo they are eating. They use their enlarged wrist bones that function as opposable thumbs.</div>
-                  </div>
-                  <img class="pet__icon" src="../../assets//icons/banana-bamboo_icon.svg" alt="diet">
-              </div>
-            </div>
-            <div class="pet">
-              <div class="pet__img pet__eagles"></div>
-              <div class="pet__info meat">
-                  <div class="pet__descr">
-                      <div class="pet__title">eagles</div>
-                      <div class="pet__subtitle">Native to South America</div>
-                      <div class="pet__text">Half a century ago, the bald eagle was in danger of extinction. Habitat loss, illegal shooting and food source contamination (largely via the pesticide DDT) decimated the bald eagle population. <br>
-                        Many people think bald eagles are fish specialists, and they are great at catching fish. But eagles are actually generalists, which means they will eat pretty much anything that they can get their talons on.</div>
-                  </div>
-                  <img class="pet__icon meat" src="../../assets//icons/meet-fish_icon.svg" alt="diet">
-              </div>
-            </div>
-            <div class="pets__controls small-controls tablet">
-              <div class="pets__control prev"><img src="../../assets/icons/prev.svg" alt="prev"></div>
-              <div class="pets__control next"><img src="../../assets/icons/next.svg" alt="next"></div>
-            </div>
-            <div class="pet">
-              <div class="pet__img pet__gorillas"></div>
-              <div class="pet__info">
-                  <div class="pet__descr">
-                      <div class="pet__title">gorillas</div>
-                      <div class="pet__subtitle">Native to Congo</div>
-                      <div class="pet__text">The gorilla is the largest of all primates. <br>
-                        Gorillas have a distinctive shape in that their stomachs are larger than their chests. Their stomach size is attributed to their enlarged intestines, which digest the bulky fibrous vegetation they consume.<br> Gorillas have larger muscles in their arms than in their legs. This is primarily due to the fact that they use their increased arm strength for bending and gathering foliage and for defense.
-                      </div>
-                  </div>
-                  <img class="pet__icon" src="../../assets//icons/banana-bamboo_icon.svg" alt="diet">
-              </div>
-            </div>
-            <div class="pets__controls small-controls">
-              <div class="pets__control prev"><img src="../../assets/icons/prev.svg" alt="prev"></div>
-              <div class="pets__control next"><img src="../../assets/icons/next.svg" alt="next"></div>
-            </div>
-            <div class="pet">
-              <div class="pet__img pet__two-toed-sloth"></div>
-              <div class="pet__info">
-                  <div class="pet__descr">
-                      <div class="pet__title">two-toed sloth</div>
-                      <div class="pet__subtitle">Mesoamerica, South America</div>
-                      <div class="pet__text">Sloths have long had a reputation for being lazy. The reason they move so slowly has a lot to do with what they eat: a variety of leaves, stems, buds, and some fruit. This kind of diet requires a special digestive system. Sloths have a large, four-chambered stomach, like a cow. Bacteria in their gut help digest the large amount of plant matter they eat. Due to the low nutritional value of their leafy diet, sloths usually move at a leisurely pace and sleep a great deal.</div>
-                  </div>
-                  <img class="pet__icon" src="../../assets//icons/banana-bamboo_icon.svg" alt="diet">
-              </div>
-            </div>
-            <div class="pet none">
-              <div class="pet__img pet__cheetahs"></div>
-              <div class="pet__info meat">
-                  <div class="pet__descr">
-                      <div class="pet__title">cheetahs</div>
-                      <div class="pet__subtitle">Native to Africa</div>
-                      <div class="pet__text">Cheetahs are visual hunters. Unlike other big cats cheetahs are diurnal, meaning they hunt in early morning and late afternoon. The prey species on which the cheetah depends have evolved speed and avoidance techniques that can keep them just out of reach. Cheetahs prey includes: gazelles, impalas and other small to medium-sized antelopes, hares, and rodents. Cheetahs will also prey on the calves of larger herd animals.</div>
-                  </div>
-                  <img class="pet__icon" src="../../assets//icons/meet-fish_icon.svg" alt="diet">
-              </div>
-            </div>
-            <div class="pet none">
-              <div class="pet__img pet__penguins"></div>
-              <div class="pet__info meat">
-                  <div class="pet__descr">
-                      <div class="pet__title">penguins</div>
-                      <div class="pet__subtitle">Native to Antarctica</div>
-                      <div class="pet__text">Penguins are the most common birds in the Antarctic. <br>
-                        The penguin diet consists mainly of fish and squid and crustaceans. In the Antarctic, the smaller penguins mostly feed on shrimp-like krill. Although krill are small (up to 5cm in length) they form dense swarms which are a rich food source. Penguins can adapt their diet to what is available, and their diet varies considerably with season.</div>
-                  </div>
-                  <img class="pet__icon" src="../../assets//icons/meet-fish_icon.svg" alt="diet">
-              </div>
-            </div>
+      <div class="container">
+        <!-- /////////////////////////////// -->
+        <div class="pets__carousel">
+        </div>
+        <!-- ////////////////////////////// -->
+        <button class="btn btn_pets"><a href="../map/">choose your favorite</a></button>
+      </div>
 
-          </div>
-          <button class="btn btn_pets"><a href="../map/">choose your favorite</a></button>
-        </div>
-        <div class="pets__controls desktop-controls">
-          <div class="pets__control prev"><img src="../../assets/icons/prev.svg" alt="prev"></div>
-          <div class="pets__control next"><img src="../../assets/icons/next.svg" alt="next"></div>
-        </div>
+      <div class="pets__controls desktop-controls">
+        <div class="pets__control prev" id = 'prev_desktop'><img src="../../assets/icons/prev.svg" alt="prev"></div>
+        <div class="pets__control next" id = 'next_desktop'><img src="../../assets/icons/next.svg" alt="next"></div>
       </div>
     </section>
     <section class="pick">
@@ -201,66 +131,15 @@
       <div class="container">
         <h4 class="testimonials__small-title">Testimonials</h4>
         <div class="testimonials__wrapper">
-          <div class="testimonial">
-            <div class="testimonial__wrapper">
-              <div class="testimonial__title">
-                <img src="../../assets/icons/user.svg" alt="avatar" class="testimonial__img">
-                <div class="testimonial__user">
-                  <div class="testimonial__name">Michael John</div>
-                  <div class="testimonial__local">Local Austria <span> • </span> Today</div>
-                </div>
-              </div>
-              <div class="testimonial__text">The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. <br>
-                The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for</div>
-              </div>
-            </div>
-          <div class="testimonial">
-            <div class="testimonial__wrapper">
-              <div class="testimonial__title">
-                <img src="../../assets/images/oskar.png" alt="avatar" class="testimonial__img">
-                <div class="testimonial__user">
-                  <div class="testimonial__name">Oskar Samborsky</div>
-                  <div class="testimonial__local">Local Austria <span> • </span> Yesterday</div>
-                </div>
-              </div>
-              <div class="testimonial__text">Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. <br>
-                The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for </div>
-            </div>
-          </div>
-          <div class="testimonial">
-            <div class="testimonial__wrapper">
-              <div class="testimonial__title">
-                <img src="../../assets/images/fredericka.png" alt="avatar" class="testimonial__img">
-                <div class="testimonial__user">
-                  <div class="testimonial__name">Fredericka Michelin</div>
-                  <div class="testimonial__local">Local Austria <span> • </span> Yesterday</div>
-                </div>
-              </div>
-              <div class="testimonial__text">The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. <br>
-                The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. <br>
-                The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for </div>
-            </div>
-          </div>
-          <div class="testimonial mila">
-            <div class="testimonial__wrapper">
-              <div class="testimonial__title">
-                <img src="../../assets/images/mila.png" alt="avatar" class="testimonial__img">
-                <div class="testimonial__user">
-                  <div class="testimonial__name">Mila Riksha</div>
-                  <div class="testimonial__local">Local Austria <span> • </span> Yesterday</div>
-                </div>
-              </div>
-              <div class="testimonial__text">My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. <br>
-                The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for</div>
-            </div>
-          </div>
+          <!-- //////////////////////////////////////////////// -->
+
         </div>
-        <input class="testimonials__input" type="range" name="testimonials" id="testimonials" value="0">
+        <input class="testimonials__input" type="range" name="testimonials" id="testimonials"  min="0" max="8" step="1" value="0">
         <button class="btn btn_testimonials">leave feedback</button>
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container">
       <div class="footer__items">
         <div class="footer__left">
@@ -297,8 +176,8 @@
             <ul class="nav__list">
               <li class="nav__item active"><a href="../main/" class="nav__link">About</a></li>
               <li class="nav__item"><a href="../map/" class="nav__link">Map</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Zoos</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Contact&nbsp;us</a></li>
+              <li class="nav__item"><a href="../zoos/" class="nav__link">Zoos</a></li>
+              <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
             </ul>
             </nav>
         </div>
@@ -318,5 +197,9 @@
       </div>
     </div>
   </footer>
+  <div class="popup">
+    <div class="popup__close"><img src="../../assets/icons/close.svg" alt=""></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

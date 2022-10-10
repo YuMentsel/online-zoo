@@ -60,6 +60,10 @@ body {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
+  // overflow: hidden;
+}
+.testimonials .container {
+  overflow: hidden;
 }
 
 .intro {
@@ -79,6 +83,25 @@ a {
   }
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+.popup-overlay {
+  z-index: 10;
+}
+@media (max-width: 850px) {
+  .overlay.active {
+    display: block;
+  }
+}
+
 @import 'btn';
 @import 'header';
 @import 'watch';
@@ -87,6 +110,7 @@ a {
 @import 'pick';
 @import 'testimonials';
 @import 'footer';
+@import 'popup';
 
 @media (max-width: 1280px) {
   .container {

@@ -115,51 +115,31 @@
     width: calc(100% - 198px);
   }
   &__area {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 52px;
     height: 52px;
-    border: 2px solid #fe901300;
     border-radius: 50%;
     cursor: pointer;
     &:hover {
-      border: 2px solid #ffee2e;
+      background-color: #ffee2e41;
     }
-  }
-  &__area2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #fe901300;
-    border-radius: 50%;
-    &:active {
-      border: 2px solid #fe9013;
-    }
-  }
-  &__area3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    border: 2px solid #fe901300;
-    border-radius: 50%;
-    &:active {
-      border: 2px solid #fe9013;
+    &.active {
+      background: url('../../../assets/icons/roller.svg') center center
+        no-repeat;
     }
   }
   &__drop {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 10px;
     height: 10px;
     background: #ffee2e;
     border-radius: 50%;
-  }
-  .active {
-    border: 2px solid #fe9013;
   }
 }
 .price {
@@ -195,10 +175,12 @@
     border-radius: 2px;
     outline: none;
     &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+      // -webkit-appearance: none;
+      appearance: none;
     }
     &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
+      // -webkit-appearance: none;
+      appearance: none;
     }
 
     &::placeholder {
@@ -344,13 +326,6 @@
     &__area.tablet {
       display: none;
     }
-    &__area,
-    &__area2,
-    &__area3 {
-      &.active-tablet {
-        border: 2px solid #fe9013;
-      }
-    }
   }
   .price {
     margin: 13px;
@@ -359,9 +334,6 @@
       width: 60px;
       &.tablet {
         display: none;
-      }
-      &.active-tablet {
-        color: #fe9013;
       }
     }
   }
@@ -555,23 +527,8 @@
       width: 104%;
     }
     &__area {
-      border: 1px solid #fe901300;
-    }
-    &__area2 {
-      width: 20px;
-      height: 20px;
-      border: 1px solid #fe901300;
-    }
-    &__area3 {
-      width: 12px;
-      height: 12px;
-      border: 1px solid #fe901300;
-    }
-    &__area,
-    &__area2,
-    &__area3 {
-      &.active-tablet {
-        border: 1px solid #fe9013;
+      &.active {
+        background-size: 42%;
       }
     }
     &__drop {

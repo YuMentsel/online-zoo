@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div class="overlay"></div>
   <header class="header">
     <div class="container">
       <div class="header__item">
@@ -23,18 +24,25 @@
           </a>
 
           <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="../main/" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="../map/" class="nav__link">Map</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Zoos</a></li>
-            <li class="nav__item active"><a href="../donate/" class="nav__link">Donate</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
-          </ul>
+            <ul class="nav__list">
+              <li>
+                <a href="../main/" class="logo logo__burger">
+                  <img src="../../assets/icons/logo_burger.svg" alt="logo" class="logo__img">
+                  <span class="logo__title">PetStory <br> online</span>
+                </a>
+              </li>
+              <li class="nav__item"><a href="../main/" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="../map/" class="nav__link">Map</a></li>
+              <li class="nav__item"><a href="../zoos/" class="nav__link">Zoos</a></li>
+              <li class="nav__item active"><a href="../donate/" class="nav__link">Donate</a></li>
+              <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+              <li class="nav__item small"><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="nav__link">Designed&nbsp;by&nbsp;©</a></li>
+            </ul>
           </nav>
         </div>
 
         <a class="designed" target="_blank" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by ©</a>
-        <div class="hamburger">
+        <div class="burger">
           <span></span>
           <span></span>
           <span></span>
@@ -66,60 +74,28 @@
               <div class="amount__line"></div>
               <div class="amount__areas">
                 <div class="amount__area small">
-                  <div class="amount__area2">
-                    <div class="amount__area3">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
                 </div>
                 <div class="amount__area tablet">
-                  <div class="amount__area2">
-                    <div class="amount__area3">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
                 </div>
                 <div class="amount__area tablet">
-                  <div class="amount__area2 active">
-                    <div class="amount__area3 active">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
                 </div>
                 <div class="amount__area">
-                  <div class="amount__area2">
-                    <div class="amount__area3">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
                 </div>
                 <div class="amount__area">
-                  <div class="amount__area2">
-                    <div class="amount__area3">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
+                </div>
+                <div class="amount__area active">
+                  <div class="amount__drop"></div>
                 </div>
                 <div class="amount__area">
-                  <div class="amount__area2 active-tablet">
-                    <div class="amount__area3 active-tablet">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
                 </div>
                 <div class="amount__area">
-                  <div class="amount__area2">
-                    <div class="amount__area3">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="amount__area">
-                  <div class="amount__area2">
-                    <div class="amount__area3">
-                      <div class="amount__drop"></div>
-                    </div>
-                  </div>
+                  <div class="amount__drop"></div>
                 </div>
               </div>
             </div>
@@ -127,19 +103,19 @@
           <div class="price">
             <div class="price__item small"><span>$5000</span></div>
             <div class="price__item tablet"><span>$2000</span></div>
-            <div class="price__item  tablet active"><span>$1000</span></div>
+            <div class="price__item  tablet"><span>$1000</span></div>
             <div class="price__item"><span>$500</span></div>
             <div class="price__item"><span>$250</span></div>
-            <div class="price__item active-tablet"><span>$100</span></div>
+            <div class="price__item active"><span>$100</span></div>
             <div class="price__item"><span>$50</span></div>
             <div class="price__item"><span>$25</span></div>
           </div>
-          <input class="input__number" placeholder="Another amount" type="number">
+          <input class="input__number" placeholder="Another amount" type="number" max="9999" value="100">
           <form class="input__wrapper">
-            <input class="input__radio monthly" name="monthly" id="monthly" value="1" type="radio">
-            <label class="input__label"for="monthly">Monthly</label>
-            <input class="input__radio once checked" name="once" id="once" value="2" type="radio" >
-            <label class="input__label"for="once">Once</label>
+            <input class="input__radio monthly" name="radio" id="monthly" value="1" type="radio">
+            <label class="input__label" for="monthly">Monthly</label>
+            <input class="input__radio once checked" name="radio" id="once" value="2" type="radio" >
+            <label class="input__label" for="once">Once</label>
           </form>
 
           <button class="btn btn_pick">Feed a friend now</button>
@@ -148,7 +124,7 @@
       </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="container">
         <div class="footer__items">
           <div class="footer__left">
@@ -185,8 +161,8 @@
               <ul class="nav__list">
                 <li class="nav__item"><a href="../main/" class="nav__link">About</a></li>
                 <li class="nav__item"><a href="../map/" class="nav__link">Map</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Zoos</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact&nbsp;us</a></li>
+                <li class="nav__item"><a href="../zoos/" class="nav__link">Zoos</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
               </ul>
               </nav>
           </div>

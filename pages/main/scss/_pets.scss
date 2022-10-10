@@ -4,12 +4,67 @@
   background: url('../../../assets/images/palm.png') no-repeat -587px 100%,
     url('../../../assets/images/strelitzia.png') no-repeat 100% 100%;
   background-size: auto 460px, auto;
-  &__wrapper {
-    display: flex;
+  &__carousel {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    // width: calc(100% - 16px);
+    height: 892px;
+    overflow: hidden;
+  }
+  &__slide {
+    padding: 0 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
     justify-content: space-between;
     flex-wrap: wrap;
+    animation: 1.5s ease-in-out;
+    overflow: hidden;
+    &.active,
+    &.next {
+      display: inline-flex;
+    }
+    .next {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
-  .desktop-controls {
+
+  .to-left {
+    animation-name: left;
+  }
+  .from-right {
+    animation-name: right;
+  }
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+
+  @keyframes left {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  &__controls {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -17,21 +72,6 @@
     width: 1322px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  .small-controls {
-    display: none;
-    justify-content: center;
-    margin: 14px 0;
-    width: 100%;
-    .pets__control {
-      margin: 0 9%;
-    }
-  }
-  .small-controls.tablet {
-    display: none;
-    .pets__control {
-      margin: 0 2.3%;
-    }
   }
   &__control {
     position: relative;
@@ -93,24 +133,38 @@
     }
   }
   &__pandas {
-    background: url(../../../assets/images/pandas.jpg) center/cover no-repeat;
-  }
-  &__eagles {
-    background: url(../../../assets/images/eagles.jpg) center/cover no-repeat;
-  }
-  &__gorillas {
-    background: url(../../../assets/images/gorillas.jpg) center/cover no-repeat;
-  }
-  &__two-toed-sloth {
-    background: url(../../../assets/images/two-toed-sloth.jpg) center/cover
+    background: url(../../../assets/images/animals/pandas.jpg) center/cover
       no-repeat;
   }
+  &__eagles {
+    background: url(../../../assets/images/animals/eagles.jpg) center/cover
+      no-repeat;
+  }
+  &__gorillas {
+    background: url(../../../assets/images/animals/gorillas.jpg) center/cover
+      no-repeat;
+  }
+  &__two-toed-sloth {
+    background: url(../../../assets/images/animals/two-toed-sloth.jpg)
+      center/cover no-repeat;
+  }
   &__cheetahs {
-    background: url(../../../assets/images/cheetahs.jpg) center/cover no-repeat;
+    background: url(../../../assets/images/animals/cheetahs.jpg) center/cover
+      no-repeat;
   }
   &__penguins {
-    background: url(../../../assets/images/penguins.jpg) center/cover no-repeat;
+    background: url(../../../assets/images/animals/penguins.jpg) center/cover
+      no-repeat;
   }
+  &__alligators {
+    background: url(../../../assets/images/animals/alligators.jpg) center/cover
+      no-repeat;
+  }
+  &__gorillas2 {
+    background: url(../../../assets/images/animals/gorillas2.jpg) center/cover
+      no-repeat;
+  }
+
   &__info {
     min-width: 100%;
     padding: 12px 12px 13px 14px;
@@ -136,10 +190,11 @@
     font-size: 15px;
   }
   &__text {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     font-size: 13px;
-    padding: 10px 30px 0 0;
+    margin-top: 10px;
+    padding: 0 30px 0 0;
   }
   &:hover &__descr {
     transform: translateY(-730%) translateX(10%) scale(1.2, 1.2);
@@ -169,30 +224,41 @@
       url('../../../assets/images/strelitzia.png') no-repeat 100% 100%;
     background-size: auto 202px, auto 180px;
   }
-  .pets .slider-container {
-    row-gap: 92px;
-  }
-  .pets .slider-controls {
-    top: 44%;
-    width: 354px;
-  }
 }
 
 @media (max-width: 1380px) {
   .pets {
-    .desktop-controls {
-      display: none;
+    &__carousel {
+      height: 939px;
     }
-    .small-controls {
-      display: flex;
+    &__slide {
+      row-gap: 92px;
     }
     .pet {
       width: 31.2%;
       height: 116.3%;
       margin-bottom: 0px;
       &__text {
-        padding: 10px 15px 0 0;
+        padding: 0 15px 0 0;
       }
+    }
+    &__controls {
+      width: 100%;
+      top: 41.4%;
+      justify-content: center;
+    }
+    &__control {
+      margin: 0 8.5%;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .pets {
+    &__carousel {
+      height: 80vw;
+    }
+    &__controls {
+      top: 40.3%;
     }
   }
 }
@@ -200,12 +266,16 @@
 @media (max-width: 1000px) {
   .pets {
     padding: 74px 0 141px 0;
-
     background: url('../../../assets/images/palm.png') no-repeat -191px 100%,
       url('../../../assets/images/strelitzia.png') no-repeat 100% 100%;
     background-size: auto 202px, auto 180px;
+    &__carousel {
+      height: 79vw;
+    }
+    &__controls {
+      top: 38.4%;
+    }
   }
-
   .pet {
     &__info {
       padding: 12px 12px 11px 14px;
@@ -218,21 +288,39 @@
     }
   }
 }
+@media (max-width: 999px) {
+  .pets {
+    &__carousel {
+      height: 83vw;
+    }
+    &__controls {
+      top: 37%;
+    }
+    .pet {
+      &__subtitle {
+        font-size: 12px;
+      }
+    }
+  }
+}
 
 @media (max-width: 820px) {
   .pets {
     padding: 12px 0 0 0;
     padding-bottom: 111px;
-    .small-controls {
-      display: none;
+    &__carousel {
+      height: 112vw;
     }
-    .small-controls.tablet {
-      display: flex;
+    &__controls {
+      top: 37.3%;
     }
     .pet {
       width: 47.5%;
       height: 116.3%;
       margin-bottom: 0px;
+      &__subtitle {
+        font-size: 15px;
+      }
     }
     .pet.none {
       display: none;
@@ -240,10 +328,24 @@
   }
 }
 
-@media (width: 640px) {
+@media (max-width: 800px) {
   .pets {
-    .small-controls {
-    margin: 11px 0 17px;
+    &__carousel {
+      height: 115vw;
+    }
+    &__controls {
+      top: 36.2%;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .pets {
+    &__carousel {
+      height: 117vw;
+    }
+    &__controls {
+      top: 35.1%;
     }
   }
 }
@@ -254,9 +356,16 @@
     background: url('../../../assets/images/palm.png') no-repeat -251px 100%,
       url('../../../assets/images/strelitzia.png') no-repeat 100% 100%;
     background-size: auto 202px, auto 131px;
-
+    &__carousel {
+      height: 116vw;
+    }
+    &__controls {
+      top: 36%;
+    }
+    &__control {
+      margin: 0 15px;
+    }
     .pet {
-
       &__info {
         padding: 10px 8px 0 12px;
       }
@@ -270,14 +379,10 @@
         font-size: 11.6901px;
       }
       &__text {
-        padding: 10px 25px 0 0;
+        padding: 0px 25px 0 0;
       }
       &__icon {
-        width: 25px;
-      }
-      &__icon.meat {
-        margin-top: -3px;
-        width: 40px;
+        margin-top: -9px;
       }
     }
   }
@@ -293,14 +398,28 @@
 @media (max-width: 620px) {
   .pets {
     padding-bottom: 80px;
+    &__carousel {
+      height: 119vw;
+    }
+    &__controls {
+      top: 35.5%;
+    }
   }
 }
 
 @media (max-width: 550px) {
+  .pets {
+    &__carousel {
+      height: 123vw;
+    }
+    &__controls {
+      top: 34.5%;
+    }
+  }
   .pet {
     &__text {
-      padding: 10px 10px 0 0;
-      font-size: 9px;
+      padding: 0px 0px 0 0;
+      font-size: 8px;
     }
     &:hover &__descr {
       transform: translateY(-500%) translateX(10%) scale(1.2, 1.2);
@@ -308,14 +427,19 @@
   }
 }
 
-
 @media (max-width: 470px) {
   .pets {
     padding-bottom: 60px;
     background: url('../../../assets/images/palm.png') no-repeat -151px 100%,
       url('../../../assets/images/strelitzia.png') no-repeat 110% 100%;
     background-size: auto 130px, auto 100px;
-    .small-controls.tablet {
+    &__carousel {
+      height: 400vw;
+    }
+    &__slide {
+      row-gap: 0px;
+    }
+    &__controls {
       display: none;
     }
     .pet {
@@ -329,8 +453,11 @@
         font-size: 15px;
       }
       &__text {
-        font-size: 11.5px;
-        padding: 10px 50px 0 0;
+        font-size: 11px;
+        padding: 0 50px 0 0;
+      }
+      &:hover &__descr {
+        transform: translateY(-500%) translateX(0%) scale(1.2, 1.2);
       }
     }
   }
@@ -346,8 +473,8 @@
 
 @media (max-width: 320px) {
   .pets {
-    .small-controls.tablet {
-      display: none;
+    &__carousel {
+      height: 420vw;
     }
     .pet {
       margin: 0 8.5px;
@@ -359,7 +486,8 @@
         font-size: 11.6901px;
       }
       &__text {
-        font-size: 11.5px;
+        font-size: 11px;
+        padding: 0 10px 0 0;
       }
     }
   }
